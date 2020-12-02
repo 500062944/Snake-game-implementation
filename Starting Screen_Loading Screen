@@ -1,0 +1,93 @@
+void starting_screen(){
+ system("Cls");
+ red();
+ gotoxy(50,10);
+ printf("1)SINGLE PLAYER");
+ gotoxy(50,11);
+ printf("2)MULTIPLAYER");
+ gotoxy(50,12);
+ printf("3)HIGHSCORE TABLE");
+ gotoxy(50,13);
+ printf("4)QUIT");
+ gotoxy(50,15);
+ scanf("%d",&user_input);
+ switch(user_input)
+ {
+ case 1:
+ {
+ game_details();
+ game_level();
+ break;
+ }
+ case 2:
+ {
+ gamemulti_details();
+ gamemulti_level();
+ break;
+ }
+ case 3:
+ {
+ printTableShape();
+ gotoxy(60,30);
+ printf("PRESS ENTER TO GOTO MAIN MENU");
+ while(1)
+ {
+ user_input = input_keyboard();//taking input
+ if(user_input == 13)//if user press enter the game will run again
+ {
+ main();
+ break;
+ }
+ else if(user_input == 27)//if user press escape the game will end
+ {
+ break;
+ }
+ }
+ break;
+ }
+ case 4:
+ {
+ system("Cls");
+ gotoxy(50,15);
+ printf("THANK YOU FOR PLAYING");
+ break;
+ }
+ default:
+ {
+ system("Cls");
+ gotoxy(50,15);
+ printf("WRONG INPUT");
+ gotoxy(50,16);
+ printf("PRESS ENTER TO GOTO MAIN MENU");
+ while(1)
+ {
+ user_input = input_keyboard();//taking input
+ if(user_input == 13)//if user press enter the game will run again
+ {
+ main();
+ break;
+ }
+ else if(user_input == 27)//if user press escape the game will end
+ {
+ break;
+ }
+ }
+ break;
+ }
+ }
+ }
+ 
+ 
+ 
+void loading_screen(){
+ int r,q;
+ gotoxy(50,10);
+ //red();
+ printf("LOADING.............");
+ gotoxy(50,12);
+ for(r=1;r<=20;r++)
+ {
+ for(q=0;q<=100000000;q++);
+ printf("%c",177);
+ }
+ }
