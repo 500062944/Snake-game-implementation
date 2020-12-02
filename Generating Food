@@ -1,0 +1,21 @@
+void Food_creation()//code for food creation
+{
+ srand(time(0));//as we run our program again and again we have the same random food
+location(that make our predictable) to over come this situation we will use srand(value) so that it
+generate food at different locatin
+ food_xcoordinate = 1+ rand() % 18; //x coordinate of food and we are adding(1) ,we are doing
+modulus by 18 so that food doesnot come on the boundary
+ food_ycoordinate = 1 + rand() % 38;//y coordinate of food and we are adding(1) ,we are doing
+modulus by 38 so that food doesnot come on the boundary
+ if(food == 0 && Box[food_xcoordinate][food_ycoordinate]==0)//checking if there is food or
+not and as well as there is empty space in the boc
+ {
+ Box[food_xcoordinate][food_ycoordinate]= -1;//we are setting special value to this
+coordinate so that we can use this while printing the food
+ food = 1;//it tells the food is already on the screen
+ if(Speed>10 && score!=0)//as the snake eats the food the speed of snake increases
+ {
+ Speed= Speed - 15;//in this we are decreasing it so that our halt time is less
+ }
+ }
+}
