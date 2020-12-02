@@ -1,0 +1,88 @@
+void print()//it will print boundary ,food and score
+{
+for(i=0;i<=wall_column+1;i++)//top vertical line of the box
+{
+ if(i==0)
+printf("%c",201);//top left corner
+else if(i==wall_column+1)
+printf("%c",187);//top right corner
+ else
+printf("%c",205);//vertical line joining top left corner and top right corner
+}
+printf("CURRENT SCORE:%d \t HIGHSCORE:%d ",score,high_score);
+printf("\n");
+for(i=0;i<wall_row;i++)//will draw two horizontal line from top left corner and top right
+corner joining bottom left corner and bottom right corner respectively
+{
+printf("%c",186);
+for(j=0;j<wall_column;j++)//NESTED FOR LOOP
+{
+if(Box[i][j]==0)
+printf(" ");//print blank space where ever we have set the value of box fiwld to 0
+if(Box[i][j]>0 && Box[i][j]!=snake_head)
+printf("%c",176);//print tail of the snake
+if(Box[i][j]==snake_head)
+printf("%c",178);//prints head of the snake
+if(Box[i][j]==-1)
+printf("%c",15);
+if(j==wall_column-1)
+printf("%c\n",186);//horizontal line
+}
+}
+for(i=0;i<=wall_column+1;i++)//bottom vertical line of the box
+{
+if(i==0)
+printf("%c",200);//bottom left corner
+else if(i==wall_column+1)
+printf("%c",188);//bottom right corner
+else
+printf("%c",205);//vertival line joining bottom left corner and bottom right corner
+}
+}
+void printmulti()//it will print boundary ,food and score
+{
+ for(i=0;i<=wall_column+1;i++)//top vertical line of the box
+ {
+ if(i==0)
+ printf("%c",201);//top left corner
+ else if(i==wall_column+1)
+ printf("%c",187);//top right corner
+ else
+ printf("%c",205);//vertical line joining top left corner and top right corner
+ }
+ printf("PLAYER1:%d PLAYER2:%d \t ",score1,score2);
+ printf("\n");
+ for(i=0;i<wall_row;i++)//will draw two horizontal line from top left corner and top right corner
+joining bottom left corner and bottom right corner respectively
+ {
+ printf("%c",186);
+ for(j=0;j<wall_column;j++)//NESTED FOR LOOP
+ {
+ if(Box[i][j]==0)
+ printf(" ");//print blank space where ever we have set the value of box fiwld to 0
+ if(Box[i][j]>0 && Box[i][j]!=snake_head)
+ printf("%c",176);//print tail of the snake
+ if(Box[i][j]==snake_head)
+ printf("%c",178);//prints head of the snake
+ if(Box[i][j]==-1)
+ printf("%c",15);
+ if(j==wall_column-1)
+ printf("%c\n",186);//horizontal line
+ }
+ }
+ for(i=0;i<=wall_column+1;i++)//bottom vertical line of the box
+ {
+ if(i==0)
+ printf("%c",200);//bottom left corner
+ else if(i==wall_column+1)
+ printf("%c",188);//bottom right corner
+ else
+ printf("%c",205);//vertival line joining bottom left corner and bottom right corner
+ }
+ if(Box[i+4][j+4]>0 && Box[i+4][j+4]!=snake2_head)
+ bold_red();
+ printf("%c",176);//print tail of the snake
+ if(Box[i+4][j+4]==snake2_head)
+ printf("%c",178);//prints head of the snake
+}
+
