@@ -1,0 +1,32 @@
+void snaketail_movement()//start of snaketail_movementfunction
+{
+ for(i=0;i<wall_row;i++)
+ {
+ for(j=0;j<wall_column;j++)
+ {
+ if(Box[i][j]==snake_tail)//we are checking where the value is non zero and then e=we are
+setting it to 0
+ {
+ Box[i][j] = 0;
+ }
+ }
+ }
+ snake_tail++;//we are incrementing the tail so that when snaketail_movemnt
+function is called it check for different value
+}//end of snaketail_movementfunction
+void snaketailmulti_movement()//start of snaketail_movementfunction
+{
+ for(i=0;i<wall_row;i++)
+ {
+ for(j=0;j<wall_column;j++)
+ {
+ if(Box[i][j]==snake2_tail)//we are checking where the value is non zero and then e=we
+are setting it to 0
+ {
+ Box[i][j] = 0;
+ }
+ }
+ }
+ snake2_tail++;//we are incrementing the tail so that when snaketail_movemnt
+function is called it check for different value
+}
