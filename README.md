@@ -47,11 +47,13 @@ Last step ask user if he wants to continue playing or not.
     And for all these mode we have defined different function as follows
    
     1) For Single Player mode
+    
     a) void snake_movementeasy()
     b) void snake_movemenmoderate()
     c) void snake_movementhard()
 
     2) For Multi Player mode
+    
     a) Void snakemulti_movementeasy()
     b) Void snakemulti_movementmoderate()
     c) Void snakemulti_movementhard()
