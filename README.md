@@ -43,6 +43,7 @@ Last step ask user if he wants to continue playing or not.
     1) Easy 
     2) Moderate
     3) Hard
+    
     And for all these mode we have defined different function as follows
    
     1) For Single Player mode
