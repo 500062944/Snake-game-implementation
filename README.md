@@ -2,11 +2,11 @@
 
                                   METHODOLOGY
 
-We will create different function for each functionality in the game such as for creating
-boundary/wall, snake movement and many more.
+We will create different function for each functionality in the game such as for creating boundary/wall, snake movement and many more.
 
 Step 1: Learning Some Basic Syntax for Devolping Gui You can add colour and you can print where you want to write You
 need to learn basic syntax like:
+
 1)gotoxy(x,y)
 
 2)textcolour()
@@ -20,6 +20,7 @@ Step 2: Welcome Page of the GameUsing above select proper background and font. W
 Step 3: Selecting the Level and mode of Game.After displaying the game title. Show the levels and ask user to select the level and mode. Save the level selected by user in variable and use it to increase the difficulty level of user.
 
 Step 4: Algorithm
+
 Food creation : In this algorithm we will use predefined function to create a random number inside the boundary. Each time a function is called it generates a random number.
 
 Random function : In c program there is a random function(rand()) which is used to place the food at any point on the screen.Thus,use this function to place food at any point on the screen.
@@ -28,13 +29,14 @@ Changing Direction : The direction of snake can be changed using kbhit() functio
 
 Step 5: Algorithm for Increasing Size of Snake and Increasing Score Increasing size of snake: 
 
-When snake moves forward it's size increases and when the coordinate of snake match with food coordinate then the size of snake is increased.
-Increasing score: When snake eats the food the score of the user is also increased
+When snake moves forward it's size increases and when the coordinate of snake match with food coordinate then the size of snake is increased.Increasing score: When snake eats the food the score of the user is also increased
 
 Step 6: Game Over Condition:
+
 When snake touch the boundary of the screen. The game over will come. This can be done by comparing the coordinate of boundary with the snake co-ordinate.
 
 Step 7: Quit Page
+
 Last step ask user if he wants to continue playing or not.
 
                                      All About Code
